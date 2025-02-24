@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Magic Box Assignment</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="font-family:'Times New Roman', Times, serif;">Magic Box Assignment</h1>
+    </header>
+    <h4 style="text-align: center; font-family: 'Courier New', Courier, monospace;">are you excited ?</h4>
+    <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> <b>Do Magic</b></h3>
+
+    <div class="magic-box-container">
+        <div class="magic-box" onclick="toggleCircle(this)">Box 1<br>Click to make circle!</div>
+        <div class="magic-box" onclick="toggleCircle(this)">Box 2<br>Click to make circle!</div>
+        <div class="magic-box" onclick="toggleCircle(this)">Box 3<br>Click to make circle!</div>
+    </div>
+
+    <footer>
+        &copy; 2025 Magic Boxes. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleCircle(box) {
+            // Apply the transition and make the box circular
+            box.style.transition = "border-radius 0.3s ease";
+            box.style.borderRadius = "50%";
+
+            // After 3 seconds, reset the border-radius to make it square again
+            setTimeout(function() {
+                box.style.transition = "border-radius 0.3s ease"; // Ensures smooth transition back to square
+                box.style.borderRadius = "10px"; // Reset to original square border radius
+            }, 600); // 3 seconds
+        }
+    </script>
+</body>
+
+</html>
+
+<style>
+    /* General body and page styles */
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: #e0f7fa;
+    }
+
+    header,
+    footer {
+        padding: 10px;
+        background-color: #00796b;
+        color: white;
+    }
+
+    .magic-box-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 50px;
+        flex-wrap: wrap; /* Allows for responsive layout */
+    }
+
+    .magic-box {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, #4db6ac, #00796b); /* Gradient background */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    }
+
+    .magic-box:hover {
+        background: linear-gradient(135deg, #00796b, #4db6ac); /* Reversed gradient on hover */
+        transform: scale(1.1);
+        color: transparent; /* Hide the text */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+    }
+
+    .magic-box p {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .magic-box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Background image for each box */
+    .magic-box:nth-child(1)::after {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTGGZVugSXpXWYlMTmTnP0MZpxayW_GKSLr3j8_x1mzEo_NEeh4j8b&s=0');
+        /* Flower 1 */
+    }
+
+    .magic-box:nth-child(2)::after {
+        background-image: url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8');
+        /* Flower 2 */
+    }
+
+    .magic-box:nth-child(3)::after {
+        background-image: url('https://images.unsplash.com/photo-1442406964439-e46ab8eff7c4');
+        /* Flower 3 */
+    }
+
+    .magic-box:hover::after {
+        opacity: 1; /* Reveal the background image on hover */
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .magic-box-container {
+            gap: 10px; /* Reduce the gap between boxes */
+        }
+
+        .magic-box {
+            width: 150px; /* Smaller box size on mobile */
+            height: 150px; /* Maintain aspect ratio */
+        }
+    }
+</style>
+
+
+
+
+
