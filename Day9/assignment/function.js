@@ -4,6 +4,7 @@
 // console.log(x == y);  
 // console.log(x === y); 
 
+
 //2.
 // const words = ["JavaScript", "Programming", "Function", "Hoisting"];
 // function findLongestWordLength(arr) {
@@ -17,6 +18,7 @@
 // }
 // console.log(findLongestWordLength(words));
 
+
 //3. 
 // function testScope() { 
 // if (true) { 
@@ -29,6 +31,7 @@
 // console.log(c); 
 // } 
 // testScope();
+
 
 //4.
 // const name = "John";  
@@ -44,6 +47,7 @@
 //5.
 // const multiply = (a, b) => a * b;
 
+
 //6.
 // const obj = { 
 //     name: "Alice", 
@@ -55,11 +59,13 @@
 //   }; 
 //   obj.sayHello();
 
+
 //7.
 // console.log(a); 
 // var a = 10;; 
 // console.log(b); 
 // let b = 20;
+
 
 // 8.
 // var double = function(n) { 
@@ -74,12 +80,14 @@
 //     return n * n; 
 //   }
 
+
 //9.
 // console.log(5 + "5");  
 // console.log(5 - "3");  
 // console.log(5 * "2");  
 // console.log("10" / 2); 
 // console.log(10 % "3");
+
 
 //10.
 // let x = 10;
@@ -91,22 +99,26 @@
 //11.
 // console.log(5 > 3 && 10 < 20); 
 // console.log(5 > 3 || 10 > 20); 
-// console.log(!(5 > 3)); 
+// console.log(!(5 > 3));
+
+
 //12.
 // function sum(a, b, c = 5) { 
 //     return a + b + c; 
 //     } 
 //     console.log(sum(2, 3));  
 //     console.log(sum(2, 3, 10));
+
+
 //13.
-function sum(...numbers) {
-    return numbers.reduce((acc, curr) => acc + curr, 0);
-  }
-  console.log(sum(1, 2, 3));         
-  console.log(sum(5, 10, 15, 20));  
-  console.log(sum(100, 200));      
-  console.log(sum(7));               
-  console.log(sum());                
+// function sum(...numbers) {
+//     return numbers.reduce((acc, curr) => acc + curr, 0);
+//   }
+//   console.log(sum(1, 2, 3));         
+//   console.log(sum(5, 10, 15, 20));  
+//   console.log(sum(100, 200));      
+//   console.log(sum(7));               
+//   console.log(sum());                
     
 
 
