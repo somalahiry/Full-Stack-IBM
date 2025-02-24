@@ -1,0 +1,36 @@
+#header {
+    height: 70px;
+    display: flex;
+    margin-top: 0;
+    margin: -7px;
+    padding-left: 40px;
+    background-color: white;
+    background-position: fixed;
+    
+}
+#signin>img {
+    margin-left: 300px;
+    margin-top: 11px ;
+}
+a {
+    margin-left: 100px;
+    margin-right: -50px;
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+}
+#body {
+    height: 211px;
+    width: 100%;
+    background-color: rgba(224, 245, 253);
+}
+
+#body>img {
+    margin-left: 180px;
+    margin-top:10px ;
+}
